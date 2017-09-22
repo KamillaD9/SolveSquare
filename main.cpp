@@ -6,7 +6,7 @@ const int SS_INF_ROOTS = 3;
 
 int SolveSquare( double a, double b, double c, double* root1, double* root2 );
 
-int SovleLinear( double b, double c, double* root );
+int SolveLinear( double b, double c, double* root );
 
 int main() {
     printf( "Enter coefficients of a*x^2 + b*x + c = 0 : " );
@@ -53,7 +53,7 @@ int SolveSquare( double a, double b, double c, double* root1, double* root2 ){
     assert( root1 != root2 );
     
     if ( a == 0 ) {
-        return SovleLinear( b, c, root1 );
+        return SolveLinear( b, c, root1 );
     }
     
     double D = b*b - 4*a*c;
@@ -72,7 +72,7 @@ int SolveSquare( double a, double b, double c, double* root1, double* root2 ){
     }
 }
 
-int SovleLinear( double b, double c, double* root ) {
+int SolveLinear( double b, double c, double* root ) {
     assert( std::isfinite( b ) );
     assert( std::isfinite( c ) );
     assert( root != nullptr );
